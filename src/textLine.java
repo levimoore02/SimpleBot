@@ -28,7 +28,7 @@ public class textLine {
     public textLine(String b, String attr) {
 
         try {
-            
+
             //Make this the path to the data files
             if (attr.equals("normal")) {
 
