@@ -1,0 +1,8 @@
+hello:don't talk to me
+how are you?:fine
+what's up?:go away
+what are you doing?:plotting against you
+How are you?:good
+are you good?:no
+what day is it?:it doesn't matter
+what time is it:time for you to go away
