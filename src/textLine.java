@@ -9,18 +9,12 @@ import java.util.Scanner;
 
 public class textLine {
 
-    public java.util.ArrayList<String> list = new java.util.ArrayList<String>();
     private HashMap<String, String> map = new HashMap<String, String>();
 
     public String line;
     public String[] parts;
     public String part1;
     public String part2;
-//    public String part3;
-//    public FileInputStream fstream;
-//    public DataInputStream in;
-//    public int listLen;
-//    public Array listContents;
     public Scanner scan = new Scanner(System.in);
     public boolean inString;
     public static String dataPath;
@@ -94,17 +88,6 @@ public class textLine {
     public static String getDataPath() {
 
         return dataPath;
-
-    }
-
-    public void getSplit() {
-
-        line = "hello:world";
-        String[] parts = line.split(":");
-        String part1 = parts[0];
-        String part2 = parts[1];
-        String part3 = parts[2];
-//        return "First string is" + part2 + " and second string is " + part3;
 
     }
 
