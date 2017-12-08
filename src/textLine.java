@@ -34,6 +34,18 @@ public class textLine {
 
             }
 
+            else if (attr.equals("happy")) {
+
+                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\happy.txt";
+
+            }
+
+            else if (attr.equals("sad")) {
+
+                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\sad.txt";
+
+            }
+
             FileInputStream fstream = new FileInputStream(dataPath);
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
