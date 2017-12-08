@@ -9,15 +9,13 @@ import java.util.Scanner;
 
 public class textLine {
 
-    private HashMap<String, String> map = new HashMap<String, String>();
-
-    public String line;
-    public String[] parts;
-    public String part1;
-    public String part2;
-    public Scanner scan = new Scanner(System.in);
-    public boolean inString;
-    public static String dataPath;
+    private String line;
+    private String[] parts;
+    private String part1;
+    private String part2;
+    private Scanner scan = new Scanner(System.in);
+    private boolean inString;
+    private static String dataPath;
 
     public textLine(String b, String attr) {
 
@@ -53,8 +51,6 @@ public class textLine {
                 parts = line.split(":");
                 part1 = parts[0];
                 part2 = parts[1];
-
-                map.put(parts[0], parts[1]);
 
                 if (part1.equals(b)) {
 
