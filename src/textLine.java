@@ -23,7 +23,7 @@ public class textLine {
 
         try {
 
-            //Make this the path to the data files
+            //Make this the path to the data files.
             if (attr.equals("normal")) {
 
                 dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\normal.txt";
