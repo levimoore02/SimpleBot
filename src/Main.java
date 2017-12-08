@@ -18,6 +18,7 @@ public class Main {
             System.out.println("Please ask me a question.");
             System.out.print("@>");
             input = scan.nextLine();
+            input = input.replace("?", "").toLowerCase();
             textLine Bot1 = new textLine(input, "angry");
 
     }
