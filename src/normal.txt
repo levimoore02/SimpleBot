@@ -6,3 +6,4 @@ how's it going?:good
 how is everything going?:good
 what is the meaning of life?:42
 what is going on?:nothing much
+are you good?:yeah

@@ -38,7 +38,7 @@ public class textLine {
 
             else if (attr.equals("angry")) {
 
-                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\sassy.txt";
+                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\angry.txt";
 
             }
 
