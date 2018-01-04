@@ -1,1 +1,1 @@
-# Simple learning program bot that you can teach by creating a new instance for each personality.
+# Simple bot that stores input paired with an answer in a .txt file in the src.
