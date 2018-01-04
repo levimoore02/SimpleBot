@@ -102,13 +102,12 @@ public class textLine {
     public void getNewQuestion(String newQuestion) {
 
             System.out.println("How would I respond to that?");
-        System.out.print("@>");
+            System.out.print("@>");
             String input = scan.nextLine();
 
             try {
 
                 String fileText = "\n" + newQuestion + ":" + input;
-
                 Files.write(Paths.get(dataPath), fileText.getBytes(), StandardOpenOption.APPEND);
 
             }
@@ -117,6 +116,8 @@ public class textLine {
                 System.out.println(e.toString());
 
             }
+
+        Main.Ask();
 
         }
 
@@ -166,6 +167,14 @@ public class textLine {
                 System.out.println(e.toString());
 
             }
+
+            Main.Ask();
+
+        }
+
+        else {
+
+            Main.Ask();
 
         }
 

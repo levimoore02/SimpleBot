@@ -12,14 +12,25 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Ask();
+
+    }
+
+    public static void Ask() {
+
         String input = "";
 
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Please ask me a question.");
-            System.out.print("@>");
-            input = scan.nextLine();
-            input = input.replace("?", "").toLowerCase();
-            textLine Bot1 = new textLine(input, "happy");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please ask me a question.");
+        System.out.print("@>");
+        input = scan.nextLine();
+        input = input.replace("?", "").toLowerCase();
+        if (!input.equals("quit")) {
+
+            textLine Bot1 = new textLine(input, "normal");
+            // Mood can be normal, angry, happy, or sad.
+
+        }
 
     }
 
