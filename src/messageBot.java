@@ -1,5 +1,4 @@
 import java.io.*;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -7,8 +6,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class textLine {
+public class messageBot {
 
+    public String input;
     private String line;
     private String[] parts;
     private String part1;
@@ -17,34 +17,32 @@ public class textLine {
     private boolean inString;
     private static String dataPath;
 
-    public textLine(String b, String attr) {
+    public messageBot(String attr) {
+
+        dataPath = attr;
+
+    }
+
+    public void Start() {
+
+        System.out.println("Please ask me a question.");
+        System.out.print("@>");
+        input = scan.nextLine();
+        input = input.replace("?", "").toLowerCase();
+
+        if (!input.equals("quit")) {
+
+            getQA();
+
+        }
+
+    }
+
+    public void getQA() {
 
         try {
 
             //Make this the path to the data files.
-            if (attr.equals("normal")) {
-
-                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\normal.txt";
-
-            }
-
-            else if (attr.equals("angry")) {
-
-                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\angry.txt";
-
-            }
-
-            else if (attr.equals("happy")) {
-
-                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\happy.txt";
-
-            }
-
-            else if (attr.equals("sad")) {
-
-                dataPath = "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\sad.txt";
-
-            }
 
             FileInputStream fstream = new FileInputStream(dataPath);
             DataInputStream in = new DataInputStream(fstream);
@@ -64,7 +62,7 @@ public class textLine {
                 part1 = parts[0];
                 part2 = parts[1];
 
-                if (part1.equals(b)) {
+                if (part1.equals(input)) {
 
                     System.out.println(part2);
                     getNewResponse(list);
@@ -82,7 +80,7 @@ public class textLine {
 
             if (!inString) {
 
-                getNewQuestion(b);
+                getNewQuestion(input);
 
             }
 
@@ -105,21 +103,25 @@ public class textLine {
             System.out.print("@>");
             String input = scan.nextLine();
 
-            try {
+            if (!input.equals("noresponse")) {
 
-                String fileText = "\n" + newQuestion + ":" + input;
-                Files.write(Paths.get(dataPath), fileText.getBytes(), StandardOpenOption.APPEND);
+                try {
+
+                    String fileText = "\n" + newQuestion + ":" + input;
+                    Files.write(Paths.get(dataPath), fileText.getBytes(), StandardOpenOption.APPEND);
+
+                }
+                catch (IOException e) {
+
+                    System.out.println(e.toString());
+
+                }
 
             }
-            catch (IOException e) {
 
-                System.out.println(e.toString());
+        Start();
 
-            }
-
-        Main.Ask();
-
-        }
+    }
 
     public void getNewResponse(ArrayList list) {
 
@@ -168,13 +170,20 @@ public class textLine {
 
             }
 
-            Main.Ask();
+            Start();
+
+        }
+
+        else if (input.equals("yes")) {
+
+            Start();
 
         }
 
         else {
 
-            Main.Ask();
+            System.out.print("Invalid command. Continuing program.\n");
+            Start();
 
         }
 

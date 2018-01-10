@@ -11,3 +11,5 @@ is that a tree:yes
 what's happening today:just a few things
 who are you:your computer
 what is going on today:just the usual
+whats going on:nothing much
+where are you:stuck inside your computer.

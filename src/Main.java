@@ -1,5 +1,5 @@
-/* Check if input is in text file, and if it is, give pre made response, else, ask for a new one, and create it, and
-average out responses.
+/*
+TAKE OUT RECURSION BY MAKING IT NOT REQUIRED TO CALL ASK() EVERY TIME THE QUESTION IS ASKED.
  */
 
 import java.io.IOException;
@@ -7,45 +7,39 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class Main {
 
+    public static HashMap<String, String> dirs = new HashMap<String, String>();
+
+    public static String botType;
+
     public static void main(String[] args) {
 
-        Ask();
+        dirs.put("normal", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\normal.txt");
+        dirs.put("angry", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\angry.txt");
+        dirs.put("happy", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\happy.txt");
+        dirs.put("sad", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\sad.txt");
 
-    }
+        Scanner scanType = new Scanner(System.in);
 
-    public static void Ask() {
+        System.out.println("Hello. Which bot would you like to talk to?");
+        botType = scanType.nextLine();
 
-        String input = "";
+        if (dirs.get(botType) != null) {
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please ask me a question.");
-        System.out.print("@>");
-        input = scan.nextLine();
-        input = input.replace("?", "").toLowerCase();
-        if (!input.equals("quit")) {
+            System.out.println("Hello. I am the " + botType + " bot!");
+            Scanner scan = new Scanner(System.in);
 
-            textLine Bot1 = new textLine(input, "normal");
-            // Mood can be normal, angry, happy, or sad.
-
-        }
-
-    }
-
-    private static void writeToText(String dataText) {
-
-        dataText = "\n" + dataText;
-
-        try {
-
-            Files.write(Paths.get(textLine.getDataPath()), dataText.getBytes(), StandardOpenOption.APPEND);
+            messageBot Bot1 = new messageBot(dirs.get(botType));
+            Bot1.Start();
 
         }
-        catch (IOException e) {
 
-            System.out.println(e.toString());
+        else {
+
+            System.out.println("Invalid bot type.");
 
         }
 
