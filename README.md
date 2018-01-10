@@ -1,1 +1,1 @@
-# Simple bot that stores input paired with an answer in a .txt file in the src.
+# Simple bot that stores input paired with an answer in a .txt file in the src. Can respond with happy, sad, angry, and normal responses, depending on what is decided at the beginning.
