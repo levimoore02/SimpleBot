@@ -21,6 +21,7 @@ public class Main {
         dirs.put("angry", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\angry.txt");
         dirs.put("happy", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\happy.txt");
         dirs.put("sad", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\sad.txt");
+        dirs.put("evil", "C:\\Users\\mccauley.levi\\Desktop\\IntelliJ Files\\SimpleBotGit\\src\\evil.txt");
 
         Scanner scanType = new Scanner(System.in);
 

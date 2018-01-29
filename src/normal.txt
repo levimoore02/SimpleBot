@@ -1,15 +1,16 @@
 how are you:fantastic!
-what's up:nothing much
 nice to meet you:nice to meet you too!
-what's your name:computer
-how's it going:good
+whats your name:computer
+hows it going:good
 how is everything going:good
 what is the meaning of life:42
 what is going on:nothing much
 are you good:yeah
 is that a tree:yes
-what's happening today:just a few things
+whats happening today:just a few things
 who are you:your computer
 what is going on today:just the usual
 whats going on:nothing much
-where are you:stuck inside your computer.
+where are you:stuck inside your computer.wha
+whats up:not much
+whats that:what's what?

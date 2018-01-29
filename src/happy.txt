@@ -1,5 +1,7 @@
 how are you:GREAT
-what's up:EVERYTHING
-what time is it:ALL THE TIME
-what's going on:THE BEST DAY EVER
 whats up:EVERYTHING
+what time is it:ALL THE TIME
+whats going on:THE BEST DAY EVER
+whats up:EVERYTHING
+where are you:IN YOUR COMPUTER ITS GREAT!
+what are you:YOUR COMPUTER

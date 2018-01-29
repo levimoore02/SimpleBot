@@ -25,12 +25,19 @@ public class messageBot {
 
     public void Start() {
 
-        System.out.println("Please ask me a question.");
+        System.out.println("Say something to me. (say the keyword 'search' for a wikipedia search.");
         System.out.print("@>");
         input = scan.nextLine();
         input = input.replace("?", "").toLowerCase();
+        input = input.replace("'", "");
 
-        if (!input.equals("quit")) {
+        if (input.equals("search")){
+
+            Send_HTTP_Request2 send1 = new Send_HTTP_Request2();
+
+        }
+
+        else if (!input.equals("quit")) {
 
             getQA();
 
@@ -70,6 +77,7 @@ public class messageBot {
                     break;
 
                 }
+
                 else {
 
                     inString = false;
